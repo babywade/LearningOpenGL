@@ -1,0 +1,17 @@
+{
+    "visualizerFile": "${workspaceFolder}/my.natvis",
+    "showDisplayString": true,
+    "configurations": [
+    {
+      "name": "(Windows) 启动",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "D:\\学习OpenGL\\LearningOpenGL\\bin\\Debug\\Demo.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "console": "externalTerminal"
+    }
+    ]
+}
