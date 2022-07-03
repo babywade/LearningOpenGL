@@ -11,7 +11,7 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main()
 {
-    // glfw: initialize and configure
+    // glfw: initialize and configure 初始化glfw层
     // ------------------------------
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -22,7 +22,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-    // glfw window creation
+    // glfw window creation 创建gl窗口对象
     // --------------------
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
@@ -34,7 +34,7 @@ int main()
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // glad: load all OpenGL function pointers
+    // glad: load all OpenGL function pointers 初始化glad层
     // ---------------------------------------
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -42,7 +42,7 @@ int main()
         return -1;
     }    
 
-    // render loop
+    // render loop 渲染循环
     // -----------
     while (!glfwWindowShouldClose(window))
     {
@@ -61,7 +61,7 @@ int main()
         glfwPollEvents();
     }
 
-    // glfw: terminate, clearing all previously allocated GLFW resources.
+    // glfw: terminate, clearing all previously allocated GLFW resources. 关闭gl窗口时，结束渲染循环，程序运行到此处。
     // ------------------------------------------------------------------
     glfwTerminate();
     return 0;
